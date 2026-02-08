@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valetiny Day Celebration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ffcce6, #ff99cc, #ff66b2);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 8px solid #ff4da6;
+            max-width: 850px;
+            width: 100%;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #ff0066;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0 #ffcc00;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            color: #cc0066;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .message {
+            color: #660033;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            color: #ff0066;
+            font-size: 2rem;
+            margin: 25px 0 15px;
+            text-shadow: 2px 2px 0 #ffcc00;
+            border-bottom: 3px dashed #ff4da6;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            padding: 20px 40px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+        }
+        
+        .yes-button {
+            background-color: #ff4da6;
+            color: white;
+            border: 5px solid #ff0066;
+        }
+        
+        .no-button {
+            background-color: #ffcc00;
+            color: #cc0066;
+            border: 5px solid #ff9900;
+            position: relative;
+        }
+        
+        .button:hover {
+            transform: scale(1.05);
+        }
+        
+        .memory-section {
+            background-color: #ffe6f2;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px 0;
+            border: 4px dashed #ff4da6;
+        }
+        
+        .memory-question {
+            color: #99004d;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .memory-input {
+            width: 90%;
+            max-width: 600px;
+            padding: 15px;
+            border-radius: 15px;
+            border: 3px solid #ff4da6;
+            font-size: 1.1rem;
+            margin: 10px 0;
+            resize: vertical;
+            min-height: 80px;
+            font-family: inherit;
+        }
+        
+        .memory-input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #ff4da6;
+        }
+        
+        .submit-btn {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s;
+            border: 3px solid #ff0066;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ff3385;
+            transform: scale(1.05);
+        }
+        
+        .memory-response {
+            background-color: #fff0f7;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px auto;
+            max-width: 700px;
+            border-left: 5px solid #ff4da6;
+            display: none;
+        }
+        
+        .instructions {
+            color: #99004d;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            font-style: italic;
+            background-color: #ffe6f2;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px dashed #ff4da6;
+        }
+        
+        .valentine-image {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 8px solid #ff0066;
+            box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+        }
+        
+        .valentine-image i {
+            font-size: 80px;
+            color: #ff0066;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 60px;
+            height: 80px;
+            border-radius: 50%;
+            z-index: 1;
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        .balloon:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        
+        .balloon1 { background: radial-gradient(circle at 30% 30%, #ff4da6, #ff0066); top: 10%; left: 5%; }
+        .balloon2 { background: radial-gradient(circle at 30% 30%, #ffcc00, #ff9900); top: 20%; right: 10%; animation-delay: -2s; }
+        .balloon3 { background: radial-gradient(circle at 30% 30%, #66ff66, #00cc00); bottom: 15%; left: 15%; animation-delay: -4s; }
+        .balloon4 { background: radial-gradient(circle at 30% 30%, #6699ff, #0066ff); top: 5%; right: 20%; animation-delay: -6s; }
+        .balloon5 { background: radial-gradient(circle at 30% 30%, #cc66ff, #9900cc); bottom: 20%; right: 5%; animation-delay: -1s; }
+        
+        .heart {
+            position: absolute;
+            color: #ff4da6;
+            font-size: 30px;
+            opacity: 0.7;
+            z-index: 1;
+            animation: float-heart 6s infinite linear;
+        }
+        
+        .heart1 { top: 15%; left: 20%; animation-delay: 0s; }
+        .heart2 { top: 60%; left: 10%; animation-delay: -2s; font-size: 40px; }
+        .heart3 { top: 30%; right: 15%; animation-delay: -4s; font-size: 25px; }
+        .heart4 { bottom: 10%; right: 20%; animation-delay: -1s; font-size: 35px; }
+        .heart5 { top: 40%; left: 30%; animation-delay: -3s; font-size: 20px; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+        
+        @keyframes float-heart {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        .counter {
+            font-size: 1.2rem;
+            color: #ff0066;
+            font-weight: bold;
+            margin-top: 10px;
+            background-color: #ffe6f2;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        footer {
+            margin-top: 30px;
+            color: #660033;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+            z-index: 10;
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            opacity: 0;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.4rem; }
+            .section-title { font-size: 1.6rem; }
+            .button { font-size: 1.5rem; padding: 15px 30px; min-width: 150px; }
+            .buttons-container { gap: 20px; }
+            .memory-input { width: 95%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Balloons -->
+    <div class="balloon balloon1"></div>
+    <div class="balloon balloon2"></div>
+    <div class="balloon balloon3"></div>
+    <div class="balloon balloon4"></div>
+    <div class="balloon balloon5"></div>
+    
+    <!-- Floating hearts -->
+    <div class="heart heart1"><i class="fas fa-heart"></i></div>
+    <div class="heart heart2"><i class="fas fa-heart"></i></div>
+    <div class="heart heart3"><i class="fas fa-heart"></i></div>
+    <div class="heart heart4"><i class="fas fa-heart"></i></div>
+    <div class="heart heart5"><i class="fas fa-heart"></i></div>
+    
+    <div class="container">
+        <h1>Happy Valetiny Day!</h1>
+        <div class="subtitle">A Day for Tiny Valentines!</div>
+        
+        <div class="valentine-image">
+            <i class="fas fa-heart"></i>
+        </div>
+        
+        <p class="message">
+            Valetiny Day is a special day to celebrate the tiny, sweet moments of love and friendship! 
+            It's all about the small gestures, little surprises, and miniature expressions of affection 
+            that make our hearts flutter. Will you be my Valetiny?
+        </p>
+        
+        <div class="buttons-container">
+            <button class="button yes-button" id="yesButton">YES!</button>
+            <button class="button no-button" id="noButton">NO</button>
+        </div>
+        
+        <p class="instructions">
+            Try clicking the "NO" button... if you can catch it! It's a bit shy and will try to avoid being clicked!
+        </p>
+        
+        <div class="counter">
+            "NO" button escapes: <span id="escapeCount">0</span>
+        </div>
+    </div>
+    
+    <!-- Memory Section -->
+    <div class="container">
+        <h2 class="section-title">Valetiny Memory Lane</h2>
+        
+        <!-- First Memory Question -->
+        <div class="memory-section">
+            <div class="memory-question">
+                <i class="fas fa-heart" style="color:#ff0066; margin-right:10px;"></i>
+                What is your favorite tiny memory with me?
+            </div>
+            <textarea class="memory-input" id="favoriteMemory" placeholder="Share your favorite small moment we've shared..."></textarea>
+            <button class="submit-btn" id="submitMemory1">Share Memory</button>
+            <div class="memory-response" id="memoryResponse1"></div>
+        </div>
+        
+        <!-- Second Memory Question -->
+        <div class="memory-section">
+            <div class="memory-question">
+                <i class="fas fa-star" style="color:#ffcc00; margin-right:10px;"></i>
+                What tiny gesture always makes you smile?
+            </div>
+            <textarea class="memory-input" id="tinyGesture" placeholder="What small thing always brightens your day?"></textarea>
+            <button class="submit-btn" id="submitMemory2">Share Gesture</button>
+            <div class="memory-response" id="memoryResponse2"></div>
+        </div>
+        
+        <div class="instructions">
+            Your memories will be saved just for this session. Feel free to write as much as you want!
+        </div>
+    </div>
+    
+    <footer>
+        Made with <i class="fas fa-heart" style="color:#ff0066;"></i> for Valetiny Day | Refresh page to restart
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const noButton = document.getElementById('noButton');
+            const yesButton = document.getElementById('yesButton');
+            const escapeCountElement = document.getElementById('escapeCount');
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+            
+            // Memory elements
+            const submitMemory1 = document.getElementById('submitMemory1');
+            const submitMemory2 = document.getElementById('submitMemory2');
+            const memoryResponse1 = document.getElementById('memoryResponse1');
+            const memoryResponse2 = document.getElementById('memoryResponse2');
+            const favoriteMemory = document.getElementById('favoriteMemory');
+            const tinyGesture = document.getElementById('tinyGesture');
+            
+            let escapeCount = 0;
+            let isMoving = false;
+            let memories = {
+                favoriteMemory: "",
+                tinyGesture: ""
+            };
+            
+            // Function to move button to a random position within the container
+            function moveButton() {
+                if (isMoving) return;
+                
+                isMoving = true;
+                
+                // Calculate max positions within the container
+                const maxX = containerRect.width - noButton.offsetWidth - 20;
+                const maxY = containerRect.height - noButton.offsetHeight - 20;
+                
+                // Generate random position
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+                
+                // Apply the new position
+                noButton.style.position = 'absolute';
+                noButton.style.left = `${randomX}px`;
+                noButton.style.top = `${randomY}px`;
+                
+                // Increment escape count
+                escapeCount++;
+                escapeCountElement.textContent = escapeCount;
+                
+                // Add a funny message after certain escapes
+                if (escapeCount === 5) {
+                    showTemporaryMessage("I'm getting good at this!", 1500);
+                } else if (escapeCount === 10) {
+                    showTemporaryMessage("You'll never catch me!", 1500);
+                } else if (escapeCount === 15) {
+                    showTemporaryMessage("I'm the escape champion!", 1500);
+                }
+                
+                // Reset moving flag after a short delay
+                setTimeout(() => {
+                    isMoving = false;
+                }, 300);
+            }
+            
+            // Function to show temporary message
+            function showTemporaryMessage(message, duration) {
+                const msgDiv = document.createElement('div');
+                msgDiv.textContent = message;
+                msgDiv.style.position = 'fixed';
+                msgDiv.style.top = '50%';
+                msgDiv.style.left = '50%';
+                msgDiv.style.transform = 'translate(-50%, -50%)';
+                msgDiv.style.backgroundColor = '#ffcc00';
+                msgDiv.style.color = '#cc0066';
+                msgDiv.style.padding = '15px 25px';
+                msgDiv.style.borderRadius = '15px';
+                msgDiv.style.fontWeight = 'bold';
+                msgDiv.style.fontSize = '1.2rem';
+                msgDiv.style.zIndex = '1000';
+                msgDiv.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+                msgDiv.style.border = '3px solid #ff9900';
+                
+                document.body.appendChild(msgDiv);
+                
+                setTimeout(() => {
+                    msgDiv.remove();
+                }, duration);
+            }
+            
+            // Add mouseenter event to move button when cursor approaches
+            noButton.addEventListener('mouseenter', function(e) {
+                moveButton();
+            });
+            
+            // Add touch event for mobile devices
+            noButton.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                moveButton();
+            });
+            
+            // Make YES button respond with a fun message
+            yesButton.addEventListener('click', function() {
+                alert('Yay! Happy Valetiny Day! 💖 You made the right choice!');
+                
+                // Add some celebration effect
+                for(let i = 0; i < 20; i++) {
+                    createHeart();
+                    createConfetti();
+                }
+            });
+            
+            // Memory submission handlers
+            submitMemory1.addEventListener('click', function() {
+                const memoryText = favoriteMemory.value.trim();
+                
+                if (memoryText === "") {
+                    alert("Please share your favorite memory before submitting!");
+                    return;
+                }
+                
+                memories.favoriteMemory = memoryText;
+                
+                // Show response
+                memoryResponse1.innerHTML = `
+                    <p><strong>Your Favorite Memory:</strong> ${memoryText}</p>
+                    <p style="color:#ff0066; margin-top:10px;"><i class="fas fa-heart"></i> That's such a sweet memory! Thank you for sharing!</p>
+                `;
+                memoryResponse1.style.display = 'block';
+                
+                // Create celebration effect
+                createHeart();
+                showTemporaryMessage("Memory saved! 💝", 1500);
+                
+                // Clear the textarea
+                favoriteMemory.value = "";
+            });
+            
+            submitMemory2.addEventListener('click', function() {
+                const gestureText = tinyGesture.value.trim();
+                
+                if (gestureText === "") {
+                    alert("Please share what tiny gesture makes you smile!");
+                    return;
+                }
+                
+                memories.tinyGesture = gestureText;
+                
+                // Show response
+                memoryResponse2.innerHTML = `
+                    <p><strong>Gesture That Makes You Smile:</strong> ${gestureText}</p>
+                    <p style="color:#ffcc00; margin-top:10px;"><i class="fas fa-star"></i> I'll make sure to do that more often! Thanks for sharing!</p>
+                `;
+                memoryResponse2.style.display = 'block';
+                
+                // Create celebration effect
+                for(let i = 0; i < 5; i++) {
+                    createHeart();
+                    createConfetti();
+                }
+                
+                showTemporaryMessage("Gesture saved! ⭐", 1500);
+                
+                // Clear the textarea
+                tinyGesture.value = "";
+            });
+            
+            // Function to create floating hearts for celebration
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                heart.style.position = 'fixed';
+                heart.style.color = '#ff0066';
+                heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.top = window.innerHeight + 'px';
+                heart.style.opacity = '0.8';
+                heart.style.zIndex = '1000';
+                heart.style.pointerEvents = 'none';
+                
+                document.body.appendChild(heart);
+                
+                // Animation
+                const animation = heart.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 0.8 },
+                    { transform: `translateY(-${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 3000 + 2000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                // Remove heart after animation completes
+                animation.onfinish = () => {
+                    heart.remove();
+                };
+            }
+            
+            // Function to create confetti
+            function createConfetti() {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.backgroundColor = getRandomColor();
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                confetti.style.top = '-20px';
+                
+                document.body.appendChild(confetti);
+                
+                // Animation
+                const animation = confetti.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 2000 + 1000,
+                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+                });
+                
+                // Remove confetti after animation completes
+                animation.onfinish = () => {
+                    confetti.remove();
+                };
+            }
+            
+            // Helper function for random colors
+            function getRandomColor() {
+                const colors = ['#ff0066', '#ff4da6', '#ffcc00', '#66ff66', '#6699ff', '#cc66ff'];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            // Create some initial floating hearts
+            for(let i = 0; i < 8; i++) {
+                setTimeout(createHeart, i * 300);
+            }
+            
+            // Make the YES button also move a little (but less than NO button)
+            yesButton.addEventListener('mouseenter', function(e) {
+                // Just a little wiggle for the YES button
+                yesButton.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
+                
+                setTimeout(() => {
+                    yesButton.style.transform = 'scale(1.05)';
+                }, 300);
+            });
+            
+            // Update container dimensions on resize
+            window.addEventListener('resize', function() {
+                const newContainerRect = container.getBoundingClientRect();
+                containerRect.width = newContainerRect.width;
+                containerRect.height = newContainerRect.height;
+            });
+            
+            // Add some example text to the memory fields as placeholder inspiration
+            window.addEventListener('load', function() {
+                // Set some placeholder inspiration text
+                favoriteMemory.placeholder = "Like that time we laughed so hard over coffee, or when you surprised me with a tiny note...";
+                tinyGesture.placeholder = "Maybe it's when I send you a funny meme, or when you make me my favorite drink...";
+            });
+        });
+    </script>
+</body>
+</html>
