@@ -2,630 +2,917 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valetiny Day Celebration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Valetiny · My Love 💕</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
         }
-        
+
         body {
-            background: linear-gradient(135deg, #ffcce6, #ff99cc, #ff66b2);
+            background: linear-gradient(145deg, #ffc0cb, #ffb3c6, #ff9eb5);
             min-height: 100vh;
-            overflow-x: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
             padding: 20px;
-        }
-        
-        .container {
-            text-align: center;
-            z-index: 10;
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 8px solid #ff4da6;
-            max-width: 850px;
-            width: 100%;
             position: relative;
-            margin-bottom: 30px;
+            overflow-x: hidden;
         }
-        
-        h1 {
-            color: #ff0066;
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 3px 3px 0 #ffcc00;
-            letter-spacing: 2px;
-        }
-        
-        .subtitle {
-            color: #cc0066;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            font-weight: bold;
-        }
-        
-        .message {
-            color: #660033;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            padding: 0 20px;
-        }
-        
-        .section-title {
-            color: #ff0066;
-            font-size: 2rem;
-            margin: 25px 0 15px;
-            text-shadow: 2px 2px 0 #ffcc00;
-            border-bottom: 3px dashed #ff4da6;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        .buttons-container {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        
-        .button {
-            padding: 20px 40px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-            min-width: 200px;
-        }
-        
-        .yes-button {
-            background-color: #ff4da6;
-            color: white;
-            border: 5px solid #ff0066;
-        }
-        
-        .no-button {
-            background-color: #ffcc00;
-            color: #cc0066;
-            border: 5px solid #ff9900;
-            position: relative;
-        }
-        
-        .button:hover {
-            transform: scale(1.05);
-        }
-        
-        .memory-section {
-            background-color: #ffe6f2;
-            padding: 25px;
-            border-radius: 20px;
-            margin: 25px 0;
-            border: 4px dashed #ff4da6;
-        }
-        
-        .memory-question {
-            color: #99004d;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        
-        .memory-input {
-            width: 90%;
-            max-width: 600px;
-            padding: 15px;
-            border-radius: 15px;
-            border: 3px solid #ff4da6;
-            font-size: 1.1rem;
-            margin: 10px 0;
-            resize: vertical;
-            min-height: 80px;
-            font-family: inherit;
-        }
-        
-        .memory-input:focus {
-            outline: none;
-            box-shadow: 0 0 10px #ff4da6;
-        }
-        
-        .submit-btn {
-            background-color: #ff66b2;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: all 0.3s;
-            border: 3px solid #ff0066;
-        }
-        
-        .submit-btn:hover {
-            background-color: #ff3385;
-            transform: scale(1.05);
-        }
-        
-        .memory-response {
-            background-color: #fff0f7;
-            padding: 15px;
-            border-radius: 15px;
-            margin: 15px auto;
-            max-width: 700px;
-            border-left: 5px solid #ff4da6;
-            display: none;
-        }
-        
-        .instructions {
-            color: #99004d;
-            font-size: 1.1rem;
-            margin-top: 20px;
-            font-style: italic;
-            background-color: #ffe6f2;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px dashed #ff4da6;
-        }
-        
-        .valentine-image {
-            width: 150px;
-            height: 150px;
-            margin: 20px auto;
-            background-color: #ffcc00;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 8px solid #ff0066;
-            box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
-        }
-        
-        .valentine-image i {
-            font-size: 80px;
-            color: #ff0066;
-        }
-        
+
+        /* ===== BALLOONS ===== */
         .balloon {
-            position: absolute;
-            width: 60px;
-            height: 80px;
+            position: fixed;
+            width: 55px;
+            height: 75px;
             border-radius: 50%;
-            z-index: 1;
-            animation: float 8s infinite ease-in-out;
+            opacity: 0.6;
+            animation: float 9s infinite ease-in-out;
+            z-index: 5;
         }
-        
-        .balloon:after {
+        .balloon::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: -18px;
             left: 50%;
             transform: translateX(-50%);
             width: 2px;
             height: 30px;
-            background-color: rgba(0, 0, 0, 0.2);
+            background: rgba(0,0,0,0.1);
         }
-        
-        .balloon1 { background: radial-gradient(circle at 30% 30%, #ff4da6, #ff0066); top: 10%; left: 5%; }
-        .balloon2 { background: radial-gradient(circle at 30% 30%, #ffcc00, #ff9900); top: 20%; right: 10%; animation-delay: -2s; }
-        .balloon3 { background: radial-gradient(circle at 30% 30%, #66ff66, #00cc00); bottom: 15%; left: 15%; animation-delay: -4s; }
-        .balloon4 { background: radial-gradient(circle at 30% 30%, #6699ff, #0066ff); top: 5%; right: 20%; animation-delay: -6s; }
-        .balloon5 { background: radial-gradient(circle at 30% 30%, #cc66ff, #9900cc); bottom: 20%; right: 5%; animation-delay: -1s; }
-        
-        .heart {
-            position: absolute;
-            color: #ff4da6;
-            font-size: 30px;
-            opacity: 0.7;
-            z-index: 1;
-            animation: float-heart 6s infinite linear;
-        }
-        
-        .heart1 { top: 15%; left: 20%; animation-delay: 0s; }
-        .heart2 { top: 60%; left: 10%; animation-delay: -2s; font-size: 40px; }
-        .heart3 { top: 30%; right: 15%; animation-delay: -4s; font-size: 25px; }
-        .heart4 { bottom: 10%; right: 20%; animation-delay: -1s; font-size: 35px; }
-        .heart5 { top: 40%; left: 30%; animation-delay: -3s; font-size: 20px; }
-        
+        .b1 { background: radial-gradient(circle at 30% 30%, #ff99bb, #ff4d6d); top: 5%; left: 2%; }
+        .b2 { background: radial-gradient(circle at 30% 30%, #ffe066, #ffaa33); top: 15%; right: 4%; animation-delay: -2s; }
+        .b3 { background: radial-gradient(circle at 30% 30%, #a3d8f0, #3399ff); bottom: 12%; left: 6%; animation-delay: -4s; }
+        .b4 { background: radial-gradient(circle at 30% 30%, #d9b3ff, #9933ff); bottom: 20%; right: 8%; animation-delay: -1s; }
+        .b5 { background: radial-gradient(circle at 30% 30%, #b3ff99, #66cc33); top: 30%; left: 12%; animation-delay: -6s; }
+
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(5deg); }
+            0%, 100% { transform: translateY(0) rotate(2deg); }
+            50% { transform: translateY(-25px) rotate(-2deg); }
         }
-        
-        @keyframes float-heart {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.7; }
-            90% { opacity: 0.7; }
-            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+
+        /* ===== MAIN WRAPPER / PAGES ===== */
+        .page {
+            max-width: 750px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-radius: 55px 55px 45px 45px;
+            padding: 35px 30px;
+            box-shadow: 0 25px 45px rgba(210, 30, 100, 0.25);
+            border: 7px solid #ff99bb;
+            position: relative;
+            z-index: 20;
+            transition: 0.4s ease;
+            margin: 15px auto;
         }
-        
-        .counter {
-            font-size: 1.2rem;
-            color: #ff0066;
-            font-weight: bold;
-            margin-top: 10px;
-            background-color: #ffe6f2;
-            padding: 5px 15px;
-            border-radius: 20px;
-            display: inline-block;
+
+        .hidden-page {
+            display: none;
         }
-        
-        footer {
-            margin-top: 30px;
-            color: #660033;
-            font-size: 0.9rem;
-            text-align: center;
-            padding: 10px;
-            z-index: 10;
-        }
-        
-        .confetti {
+
+        /* ===== ADMIN BUTTON - SIRF ADMIN DEKHEGA ===== */
+        .admin-login-btn {
             position: fixed;
-            width: 15px;
-            height: 15px;
-            opacity: 0;
-            z-index: 1000;
-            pointer-events: none;
+            bottom: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 9999;
+            border: 3px solid #ff99bb;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .subtitle { font-size: 1.4rem; }
-            .section-title { font-size: 1.6rem; }
-            .button { font-size: 1.5rem; padding: 15px 30px; min-width: 150px; }
-            .buttons-container { gap: 20px; }
-            .memory-input { width: 95%; }
+        .admin-login-btn:hover {
+            background: #1e2b38;
+            transform: scale(1.05);
         }
+
+        /* ===== LOGIN MODAL ===== */
+        .login-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            border-radius: 40px;
+            padding: 35px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            z-index: 99999;
+            border: 8px solid #ff99bb;
+            display: none;
+            text-align: center;
+        }
+        .login-modal.show {
+            display: block;
+        }
+        .login-modal h3 {
+            color: #c2185b;
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+        .login-modal input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 40px;
+            border: 3px solid #ffb3c6;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-modal button {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 10px;
+            border: 3px solid #ff1744;
+            cursor: pointer;
+        }
+        .login-modal .cancel-btn {
+            background: #95a5a6;
+            border-color: #7f8c8d;
+        }
+
+        /* ===== ADMIN PANEL - RESPONSES DEKHNE KE LIYE ===== */
+        .admin-panel {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            background: white;
+            border-radius: 40px;
+            padding: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+            z-index: 99999;
+            border: 8px solid #ff99bb;
+            display: none;
+            overflow-y: auto;
+        }
+        .admin-panel.show {
+            display: block;
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #ffb3c6;
+            padding-bottom: 15px;
+        }
+        .admin-header h2 {
+            color: #c2185b;
+            font-size: 2rem;
+        }
+        .close-btn {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            cursor: pointer;
+            border: 3px solid white;
+        }
+        .memory-log {
+            background: #fff5f9;
+            border-radius: 25px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 10px solid #ff4d6d;
+        }
+        .memory-log h3 {
+            color: #b34167;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        .memory-log p {
+            font-size: 1.2rem;
+            color: #333;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px dashed #ff99bb;
+            word-break: break-word;
+        }
+        .timestamp {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .no-data {
+            text-align: center;
+            color: #888;
+            font-size: 1.3rem;
+            padding: 40px;
+        }
+
+        /* ===== REST OF YOUR STYLES (unchanged) ===== */
+        h1 {
+            color: #c2185b;
+            font-size: 2.9rem;
+            text-shadow: 3px 3px 0 #ffe0f0;
+            letter-spacing: 2px;
+            font-weight: 800;
+            text-align: center;
+            word-break: break-word;
+        }
+        h2 {
+            color: #b23b5e;
+            font-size: 1.9rem;
+            margin-bottom: 15px;
+        }
+        .subhead {
+            color: #a13e5c;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin: 35px 0 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 16px 45px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 80px;
+            cursor: pointer;
+            box-shadow: 0 9px 0 rgba(0,0,0,0.08);
+            transition: 0.12s;
+            min-width: 180px;
+            letter-spacing: 3px;
+        }
+        .btn-yes {
+            background: #ff4d6d;
+            color: white;
+            border: 5px solid #ff1744;
+            text-shadow: 2px 2px 0 #990033;
+        }
+        .btn-no {
+            background: #ffe082;
+            color: #9b1d3f;
+            border: 5px solid #ffb300;
+            text-shadow: 1px 1px 0 white;
+            position: relative;
+        }
+        .btn-yes:hover { transform: scale(1.08); background: #ff3355; }
+        .photo-section {
+            background: #ffe6f0;
+            border-radius: 35px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 6px dashed #ff80aa;
+            display: none;
+        }
+        .photo-frame {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border-radius: 30px;
+            border: 5px solid #ff99bb;
+        }
+        .photo-frame img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 25px;
+            display: block;
+            box-shadow: 0 8px 20px rgba(200,0,80,0.3);
+        }
+        .message-card {
+            background: #fff0f5;
+            padding: 25px;
+            border-radius: 35px;
+            margin: 20px 0;
+            border: 4px dashed #ff80a5;
+        }
+        .message-text {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: #2d1a1f;
+            font-weight: 600;
+        }
+        .memory-card {
+            background: #fff5f9;
+            border-radius: 35px;
+            padding: 28px;
+            margin: 25px 0;
+            border: 4px solid #ff99bb;
+            box-shadow: 0 10px 0 #ffccd5;
+        }
+        .memory-card h3 {
+            color: #b34167;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .memory-card textarea {
+            width: 100%;
+            padding: 18px;
+            border-radius: 25px;
+            border: 3px solid #ffb3c6;
+            font-size: 1.2rem;
+            margin: 10px 0 15px;
+            resize: vertical;
+            min-height: 110px;
+            background: white;
+        }
+        .memory-btn {
+            background: #ff6b8b;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border: 3px solid #ff3366;
+            cursor: pointer;
+        }
+        .memory-btn:hover { background: #ff4d6d; }
+        .memory-response {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            background: #ffeaf0;
+            border-radius: 25px;
+            border-left: 10px solid #ff4d6d;
+            font-size: 1.2rem;
+        }
+        .escape-counter {
+            background: #ffe6f0;
+            padding: 10px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            color: #b23b5e;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .nav-btn {
+            background: #ff99bb;
+            padding: 12px 28px;
+            border-radius: 40px;
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: 3px solid white;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #9e3d5a;
+            font-size: 1.1rem;
+        }
+        i { margin: 0 4px; }
     </style>
 </head>
 <body>
-    <!-- Balloons -->
-    <div class="balloon balloon1"></div>
-    <div class="balloon balloon2"></div>
-    <div class="balloon balloon3"></div>
-    <div class="balloon balloon4"></div>
-    <div class="balloon balloon5"></div>
-    
-    <!-- Floating hearts -->
-    <div class="heart heart1"><i class="fas fa-heart"></i></div>
-    <div class="heart heart2"><i class="fas fa-heart"></i></div>
-    <div class="heart heart3"><i class="fas fa-heart"></i></div>
-    <div class="heart heart4"><i class="fas fa-heart"></i></div>
-    <div class="heart heart5"><i class="fas fa-heart"></i></div>
-    
-    <div class="container">
-        <h1>Happy valentine  Day!</h1>
-        <div class="subtitle">A Day for Tiny Valentines!</div>
-        
-        <div class="valentine-image">
-            <i class="fas fa-heart"></i>
-        </div>
-        
-        <p class="message">
-            valentine  Day is a special day to celebrate the tiny, sweet moments of love and friendship! 
-            It's all about the small gestures, little surprises, and miniature expressions of affection 
-            that make our hearts flutter. Will you be my Valetiny?
-        </p>
-        
-        <div class="buttons-container">
-            <button class="button yes-button" id="yesButton">YES!</button>
-            <button class="button no-button" id="noButton">NO</button>
-        </div>
-        
-        <p class="instructions">
-            Try clicking the "NO" button... if you can catch it! It's a bit shy and will try to avoid being clicked!
-        </p>
-        
-        <div class="counter">
-            "NO" button escapes: <span id="escapeCount">0</span>
+
+    <!-- ===== FLOATING BALLOONS ===== -->
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+    <div class="balloon b5"></div>
+
+    <!-- ===== ADMIN LOGIN BUTTON - SIRF ADMIN DEKHEGA ===== -->
+    <button id="adminLoginBtn" class="admin-login-btn">
+        <i class="fas fa-lock"></i> Admin Login
+    </button>
+
+    <!-- ===== LOGIN MODAL (Username: admin123, Password: 123) ===== -->
+    <div id="loginModal" class="login-modal">
+        <h3><i class="fas fa-shield-heart"></i> Admin Login</h3>
+        <input type="text" id="username" placeholder="Username" autocomplete="off">
+        <input type="password" id="password" placeholder="Password" autocomplete="off">
+        <div>
+            <button id="loginSubmitBtn">Login</button>
+            <button id="loginCancelBtn" class="cancel-btn">Cancel</button>
         </div>
     </div>
-    
-    <!-- Memory Section -->
-    <div class="container">
-        <h2 class="section-title">valentine  Memory Lane</h2>
-        
-        <!-- First Memory Question -->
-        <div class="memory-section">
-            <div class="memory-question">
-                <i class="fas fa-heart" style="color:#ff0066; margin-right:10px;"></i>
-                What is your favorite tiny memory with me?
-            </div>
-            <textarea class="memory-input" id="favoriteMemory" placeholder="Share your favorite small moment we've shared..."></textarea>
-            <button class="submit-btn" id="submitMemory1">Share Memory</button>
-            <div class="memory-response" id="memoryResponse1"></div>
+
+    <!-- ===== ADMIN PANEL - SIRF LOGIN KARNE KE BAAD DIKHEGA ===== -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-header">
+            <h2><i class="fas fa-heart" style="color:#ff4d6d;"></i> User Responses <i class="fas fa-heart" style="color:#ff4d6d;"></i></h2>
+            <button id="closeAdminBtn" class="close-btn">&times;</button>
         </div>
         
-        <!-- Second Memory Question -->
-        <div class="memory-section">
-            <div class="memory-question">
-                <i class="fas fa-star" style="color:#ffcc00; margin-right:10px;"></i>
-                What tiny gesture always makes you smile?
+        <div id="adminContent">
+            <div class="no-data">
+                <i class="fas fa-inbox" style="font-size: 3rem; color: #ff99bb; margin-bottom: 15px;"></i><br>
+                📭 No memories shared yet.
             </div>
-            <textarea class="memory-input" id="tinyGesture" placeholder="What small thing always brightens your day?"></textarea>
-            <button class="submit-btn" id="submitMemory2">Share Gesture</button>
-            <div class="memory-response" id="memoryResponse2"></div>
         </div>
         
-        <div class="instructions">
-            Your memories will be saved just for this session. Feel free to write as much as you want!
+        <div style="margin-top: 25px; text-align: right; color: #888;">
+            <i class="fas fa-clock"></i> Last updated: <span id="lastUpdated">just now</span>
         </div>
     </div>
-    
-    <footer>
-        Made with <i class="fas fa-heart" style="color:#ff0066;"></i> for Valetiny Day | Refresh page to restart
-    </footer>
+
+    <!-- ========== PAGE 1 : PROPOSAL + MOVING NO BUTTON ========= -->
+    <div id="page1" class="page">
+        <h1>💗 valentine day 💗</h1>
+        <div class="subhead">My love, my heart 🌯❤️</div>
+
+        <!-- 📸 YOUR PHOTO - EXACT PATH -->
+        <div id="photoRevealContainer" class="photo-section">
+            <div class="photo-frame">
+                <img id="myValentinePhoto" 
+                     src="img/WhatsApp Image 2026-02-11 at 9.14.50 AM.jpeg" 
+                     alt="My love, my shawarma" 
+                     onerror="this.src='https://i.imgur.com/Lz1tL2U.jpeg'; this.alt='Love you always';">
+            </div>
+        </div>
+
+        <!-- 💌 YOUR EXACT MESSAGE -->
+        <div class="message-card">
+            <div class="message-text">
+                Hey Bbg Happy Valentines day even tho I don't believe in all this bullshit but look what love for you makes me do things like this I know we're going through tough times but in Sha Allah I have faith in Allah hamara nikkah Hoga love you soooo much mwahhh 💕 Mera shawarma
+            </div>
+        </div>
+
+        <!-- TWO BUTTONS: YES and the RUNAWAY NO -->
+        <div class="btn-group">
+            <button id="yesButtonPage1" class="btn btn-yes">YES!</button>
+            <button id="noButtonPage1" class="btn btn-no">NO</button>
+        </div>
+
+        <!-- Escape counter -->
+        <div style="text-align: center;">
+            <span class="escape-counter">
+                <i class="fas fa-running"></i> NO escapes: <span id="escapeCount">0</span>
+            </span>
+        </div>
+
+        <!-- Next hint (appears after YES) -->
+        <div id="nextHint" style="display: none; margin-top: 25px; background: #ffe6f0; padding: 15px; border-radius: 40px; text-align: center; font-size: 1.2rem; color:#b23b5e;">
+            <i class="fas fa-arrow-right"></i> You said YES! Continue to our memories <i class="fas fa-arrow-right"></i>
+            <button id="goToPage2Btn" class="nav-btn" style="margin-left: 15px;">Next ➡️</button>
+        </div>
+    </div>
+
+    <!-- ========== PAGE 2 : MEMORY QUESTION 1 ========= -->
+    <div id="page2" class="page hidden-page">
+        <h2 style="text-align: center;">✨ Memory Lane ✨</h2>
+        <div style="text-align: center; font-size: 1.6rem; color:#b23b5e; margin-bottom: 10px;">
+            <i class="fas fa-heart"></i> <i class="fas fa-heart"></i> <i class="fas fa-heart"></i>
+        </div>
+        
+        <div class="memory-card">
+            <h3><i class="fas fa-heart" style="color:#ff4d6d;"></i> Your favorite tiny memory with me?</h3>
+            <textarea id="memoryInput1" placeholder="Like the first time we shared shawarma... 🌯"></textarea>
+            <button id="submitMemory1" class="memory-btn">Share this memory</button>
+            <div id="memoryResponse1" class="memory-response"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <button id="backToPage1Btn" class="nav-btn" style="background:#ffb3c6;">⬅️ Back</button>
+            <button id="goToPage3Btn" class="nav-btn" style="background:#ff99bb;">Next ⬇️</button>
+        </div>
+        <div class="footer">
+            <i class="fas fa-heart"></i> Valetiny memories last forever <i class="fas fa-heart"></i>
+        </div>
+    </div>
+
+    <!-- ========== PAGE 3 : MEMORY QUESTION 2 ========= -->
+    <div id="page3" class="page hidden-page">
+        <h2 style="text-align: center;">⭐ Tiny Gestures ⭐</h2>
+        <div style="text-align: center; font-size: 1.6rem; color:#ff8c42;">
+            <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+        </div>
+
+        <div class="memory-card">
+            <h3><i class="fas fa-star" style="color:#ffaa33;"></i> What tiny gesture always makes you smile?</h3>
+            <textarea id="memoryInput2" placeholder="When I call you my mine? Or when I make you laugh? 😄"></textarea>
+            <button id="submitMemory2" class="memory-btn">Share this gesture</button>
+            <div id="memoryResponse2" class="memory-response"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <button id="backToPage2Btn" class="nav-btn" style="background:#ffb3c6;">⬅️ Back</button>
+            <button id="finishBtn" class="nav-btn" style="background:#ff99bb;">Finish 💖</button>
+        </div>
+        <div class="footer">
+            <i class="fas fa-heart"></i> Together is my favourite place <i class="fas fa-heart"></i>
+        </div>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const noButton = document.getElementById('noButton');
-            const yesButton = document.getElementById('yesButton');
-            const escapeCountElement = document.getElementById('escapeCount');
-            const container = document.querySelector('.container');
-            const containerRect = container.getBoundingClientRect();
-            
+        (function() {
+            "use strict";
+
+            // ---------- PAGE ELEMENTS ----------
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+            const page3 = document.getElementById('page3');
+
+            // Buttons
+            const yesBtn = document.getElementById('yesButtonPage1');
+            const noBtn = document.getElementById('noButtonPage1');
+            const escapeSpan = document.getElementById('escapeCount');
+            const photoContainer = document.getElementById('photoRevealContainer');
+            const nextHint = document.getElementById('nextHint');
+            const goToPage2Btn = document.getElementById('goToPage2Btn');
+
+            // Nav buttons
+            const backToPage1 = document.getElementById('backToPage1Btn');
+            const goToPage3 = document.getElementById('goToPage3Btn');
+            const backToPage2 = document.getElementById('backToPage2Btn');
+            const finishBtn = document.getElementById('finishBtn');
+
             // Memory elements
-            const submitMemory1 = document.getElementById('submitMemory1');
-            const submitMemory2 = document.getElementById('submitMemory2');
-            const memoryResponse1 = document.getElementById('memoryResponse1');
-            const memoryResponse2 = document.getElementById('memoryResponse2');
-            const favoriteMemory = document.getElementById('favoriteMemory');
-            const tinyGesture = document.getElementById('tinyGesture');
+            const memory1 = document.getElementById('memoryInput1');
+            const submitMem1 = document.getElementById('submitMemory1');
+            const response1 = document.getElementById('memoryResponse1');
+            const memory2 = document.getElementById('memoryInput2');
+            const submitMem2 = document.getElementById('submitMemory2');
+            const response2 = document.getElementById('memoryResponse2');
             
-            let escapeCount = 0;
-            let isMoving = false;
-            let memories = {
-                favoriteMemory: "",
-                tinyGesture: ""
+            // ---------- ADMIN ELEMENTS ----------
+            const adminLoginBtn = document.getElementById('adminLoginBtn');
+            const loginModal = document.getElementById('loginModal');
+            const username = document.getElementById('username');
+            const password = document.getElementById('password');
+            const loginSubmitBtn = document.getElementById('loginSubmitBtn');
+            const loginCancelBtn = document.getElementById('loginCancelBtn');
+            const adminPanel = document.getElementById('adminPanel');
+            const closeAdminBtn = document.getElementById('closeAdminBtn');
+            const adminContent = document.getElementById('adminContent');
+            const lastUpdated = document.getElementById('lastUpdated');
+            
+            // ---------- ADMIN CREDENTIALS ----------
+            const ADMIN_USERNAME = "admin123";
+            const ADMIN_PASSWORD = "123";
+            
+            // ---------- STORAGE FOR USER RESPONSES ----------
+            let userResponses = {
+                memory1: [],
+                memory2: []
             };
             
-            // Function to move button to a random position within the container
-            function moveButton() {
+            // ---------- LOAD SAVED RESPONSES ----------
+            function loadResponses() {
+                const saved = localStorage.getItem('valentineUserResponses');
+                if (saved) {
+                    try {
+                        userResponses = JSON.parse(saved);
+                    } catch(e) {}
+                }
+            }
+            
+            // ---------- SAVE RESPONSES ----------
+            function saveResponses() {
+                localStorage.setItem('valentineUserResponses', JSON.stringify(userResponses));
+            }
+            
+            // ---------- UPDATE ADMIN PANEL (SIRF ADMIN DEKHEGA) ----------
+            function updateAdminPanel() {
+                const hasMemories = userResponses.memory1.length > 0 || userResponses.memory2.length > 0;
+                
+                if (!hasMemories) {
+                    adminContent.innerHTML = `
+                        <div class="no-data">
+                            <i class="fas fa-inbox" style="font-size: 3rem; color: #ff99bb; margin-bottom: 15px;"></i><br>
+                            📭 No memories shared yet.
+                        </div>
+                    `;
+                    return;
+                }
+                
+                let html = '';
+                
+                // Memory 1 responses
+                if (userResponses.memory1.length > 0) {
+                    html += `<h3 style="color:#c2185b; margin-bottom:15px;"><i class="fas fa-heart"></i> Favorite Memories (${userResponses.memory1.length})</h3>`;
+                    
+                    userResponses.memory1.slice().reverse().forEach((item, index) => {
+                        html += `
+                            <div class="memory-log">
+                                <h3><i class="fas fa-heart" style="color:#ff4d6d;"></i> Memory #${userResponses.memory1.length - index}</h3>
+                                <p>${item.text}</p>
+                                <div class="timestamp">
+                                    <i class="fas fa-clock"></i> ${item.timestamp}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                
+                // Memory 2 responses
+                if (userResponses.memory2.length > 0) {
+                    html += `<h3 style="color:#c2185b; margin-top:30px; margin-bottom:15px;"><i class="fas fa-star"></i> Tiny Gestures (${userResponses.memory2.length})</h3>`;
+                    
+                    userResponses.memory2.slice().reverse().forEach((item, index) => {
+                        html += `
+                            <div class="memory-log">
+                                <h3><i class="fas fa-star" style="color:#ffaa33;"></i> Gesture #${userResponses.memory2.length - index}</h3>
+                                <p>${item.text}</p>
+                                <div class="timestamp">
+                                    <i class="fas fa-clock"></i> ${item.timestamp}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                
+                html += `<div style="margin-top: 25px; padding: 15px; background: #ffe6f0; border-radius: 20px; text-align: center; font-weight: bold; color: #b23b5e;">
+                    <i class="fas fa-heart"></i> Total Responses: ${userResponses.memory1.length + userResponses.memory2.length} 
+                    <i class="fas fa-heart"></i>
+                </div>`;
+                
+                adminContent.innerHTML = html;
+                lastUpdated.innerText = new Date().toLocaleTimeString();
+            }
+
+            // ---------- RUNAWAY NO BUTTON ----------
+            let escapeCount = 0;
+            let isMoving = false;
+
+            function moveNoButton() {
                 if (isMoving) return;
-                
                 isMoving = true;
+
+                const container = page1;
+                const btn = noBtn;
+                const containerRect = container.getBoundingClientRect();
+                const btnRect = btn.getBoundingClientRect();
+
+                container.style.position = 'relative';
                 
-                // Calculate max positions within the container
-                const maxX = containerRect.width - noButton.offsetWidth - 20;
-                const maxY = containerRect.height - noButton.offsetHeight - 20;
+                const maxX = containerRect.width - btnRect.width - 30;
+                const maxY = containerRect.height - btnRect.height - 30;
                 
-                // Generate random position
-                const randomX = Math.floor(Math.random() * maxX);
-                const randomY = Math.floor(Math.random() * maxY);
-                
-                // Apply the new position
-                noButton.style.position = 'absolute';
-                noButton.style.left = `${randomX}px`;
-                noButton.style.top = `${randomY}px`;
-                
-                // Increment escape count
-                escapeCount++;
-                escapeCountElement.textContent = escapeCount;
-                
-                // Add a funny message after certain escapes
-                if (escapeCount === 5) {
-                    showTemporaryMessage("I'm getting good at this!", 1500);
-                } else if (escapeCount === 10) {
-                    showTemporaryMessage("You'll never catch me!", 1500);
-                } else if (escapeCount === 15) {
-                    showTemporaryMessage("I'm the escape champion!", 1500);
+                if (maxX > 60 && maxY > 60) {
+                    const randX = Math.floor(Math.random() * maxX);
+                    const randY = Math.floor(Math.random() * maxY);
+                    
+                    btn.style.position = 'absolute';
+                    btn.style.left = randX + 'px';
+                    btn.style.top = randY + 'px';
+                    btn.style.zIndex = '50';
+                    
+                    escapeCount++;
+                    escapeSpan.innerText = escapeCount;
+
+                    if (escapeCount === 5) showToast("Can't catch me! 🏃‍♂️");
+                    if (escapeCount === 12) showToast("Okay you really love me? 🥹");
+                    if (escapeCount === 20) showToast("Fine, I give up! 😘");
                 }
-                
-                // Reset moving flag after a short delay
-                setTimeout(() => {
-                    isMoving = false;
-                }, 300);
+
+                setTimeout(() => { isMoving = false; }, 180);
             }
-            
-            // Function to show temporary message
-            function showTemporaryMessage(message, duration) {
-                const msgDiv = document.createElement('div');
-                msgDiv.textContent = message;
-                msgDiv.style.position = 'fixed';
-                msgDiv.style.top = '50%';
-                msgDiv.style.left = '50%';
-                msgDiv.style.transform = 'translate(-50%, -50%)';
-                msgDiv.style.backgroundColor = '#ffcc00';
-                msgDiv.style.color = '#cc0066';
-                msgDiv.style.padding = '15px 25px';
-                msgDiv.style.borderRadius = '15px';
-                msgDiv.style.fontWeight = 'bold';
-                msgDiv.style.fontSize = '1.2rem';
-                msgDiv.style.zIndex = '1000';
-                msgDiv.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
-                msgDiv.style.border = '3px solid #ff9900';
-                
-                document.body.appendChild(msgDiv);
-                
-                setTimeout(() => {
-                    msgDiv.remove();
-                }, duration);
+
+            function showToast(msg) {
+                const toast = document.createElement('div');
+                toast.innerText = msg;
+                toast.style.position = 'fixed';
+                toast.style.bottom = '30%';
+                toast.style.left = '50%';
+                toast.style.transform = 'translateX(-50%)';
+                toast.style.background = '#ffe082';
+                toast.style.color = '#9b1d3f';
+                toast.style.padding = '14px 28px';
+                toast.style.borderRadius = '60px';
+                toast.style.fontWeight = 'bold';
+                toast.style.fontSize = '1.3rem';
+                toast.style.border = '5px solid #ff80a5';
+                toast.style.zIndex = '9999';
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 2000);
             }
-            
-            // Add mouseenter event to move button when cursor approaches
-            noButton.addEventListener('mouseenter', function(e) {
-                moveButton();
-            });
-            
-            // Add touch event for mobile devices
-            noButton.addEventListener('touchstart', function(e) {
-                e.preventDefault();
-                moveButton();
-            });
-            
-            // Make YES button respond with a fun message
-            yesButton.addEventListener('click', function() {
-                alert('Yay! Happy Valetiny Day! 💖 You made the right choice!');
+
+            noBtn.addEventListener('mouseenter', moveNoButton);
+            noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); moveNoButton(); });
+
+            // ---------- YES BUTTON ----------
+            yesBtn.addEventListener('click', function() {
+                photoContainer.style.display = 'block';
+                nextHint.style.display = 'block';
                 
-                // Add some celebration effect
-                for(let i = 0; i < 20; i++) {
-                    createHeart();
-                    createConfetti();
-                }
-            });
-            
-            // Memory submission handlers
-            submitMemory1.addEventListener('click', function() {
-                const memoryText = favoriteMemory.value.trim();
+                for (let i=0; i<30; i++) createHeart();
                 
-                if (memoryText === "") {
-                    alert("Please share your favorite memory before submitting!");
+                const loveMsg = document.createElement('div');
+                loveMsg.innerText = '💞 In Sha Allah hamara nikkah hoga! 💞';
+                loveMsg.style.position = 'fixed';
+                loveMsg.style.top = '50%';
+                loveMsg.style.left = '50%';
+                loveMsg.style.transform = 'translate(-50%, -50%)';
+                loveMsg.style.background = '#ff4d6d';
+                loveMsg.style.color = 'white';
+                loveMsg.style.padding = '20px 40px';
+                loveMsg.style.borderRadius = '70px';
+                loveMsg.style.fontSize = '1.8rem';
+                loveMsg.style.fontWeight = 'bold';
+                loveMsg.style.zIndex = '99999';
+                loveMsg.style.border = '8px solid #ffe082';
+                loveMsg.style.boxShadow = '0 15px 30px rgba(0,0,0,0.3)';
+                document.body.appendChild(loveMsg);
+                setTimeout(() => loveMsg.remove(), 3500);
+            });
+
+            // ---------- PAGE NAVIGATION ----------
+            goToPage2Btn.addEventListener('click', function() {
+                page1.classList.add('hidden-page');
+                page2.classList.remove('hidden-page');
+                page3.classList.add('hidden-page');
+            });
+
+            backToPage1.addEventListener('click', function() {
+                page1.classList.remove('hidden-page');
+                page2.classList.add('hidden-page');
+                page3.classList.add('hidden-page');
+            });
+
+            goToPage3.addEventListener('click', function() {
+                page2.classList.add('hidden-page');
+                page3.classList.remove('hidden-page');
+                page1.classList.add('hidden-page');
+            });
+
+            backToPage2.addEventListener('click', function() {
+                page2.classList.remove('hidden-page');
+                page3.classList.add('hidden-page');
+                page1.classList.add('hidden-page');
+            });
+
+            finishBtn.addEventListener('click', function() {
+                alert('Love you my shawarma! 💕 Valetiny Day forever!');
+                for (let i=0; i<40; i++) createHeart();
+            });
+
+            // ---------- MEMORY 1 SUBMIT (SAVE FOR ADMIN) ----------
+            submitMem1.addEventListener('click', function() {
+                const text = memory1.value.trim();
+                if (text === '') {
+                    alert('Please write your precious memory 💗');
                     return;
                 }
                 
-                memories.favoriteMemory = memoryText;
+                // Save for admin
+                const timestamp = new Date().toLocaleString();
+                userResponses.memory1.push({
+                    text: text,
+                    timestamp: timestamp
+                });
+                saveResponses();
                 
-                // Show response
-                memoryResponse1.innerHTML = `
-                    <p><strong>Your Favorite Memory:</strong> ${memoryText}</p>
-                    <p style="color:#ff0066; margin-top:10px;"><i class="fas fa-heart"></i> That's such a sweet memory! Thank you for sharing!</p>
-                `;
-                memoryResponse1.style.display = 'block';
+                // Show to user
+                response1.style.display = 'block';
+                response1.innerHTML = `<strong>✨ Your memory:</strong> ${text}<br><span style="color:#c2185b;">I'll treasure this forever. Mwah! 💋</span>`;
+                memory1.value = '';
                 
-                // Create celebration effect
-                createHeart();
-                showTemporaryMessage("Memory saved! 💝", 1500);
+                for (let i=0;i<5;i++) createHeart();
                 
-                // Clear the textarea
-                favoriteMemory.value = "";
+                // Update admin panel if open
+                updateAdminPanel();
             });
-            
-            submitMemory2.addEventListener('click', function() {
-                const gestureText = tinyGesture.value.trim();
-                
-                if (gestureText === "") {
-                    alert("Please share what tiny gesture makes you smile!");
+
+            // ---------- MEMORY 2 SUBMIT (SAVE FOR ADMIN) ----------
+            submitMem2.addEventListener('click', function() {
+                const text = memory2.value.trim();
+                if (text === '') {
+                    alert('Please tell me what makes you smile ⭐');
                     return;
                 }
                 
-                memories.tinyGesture = gestureText;
+                // Save for admin
+                const timestamp = new Date().toLocaleString();
+                userResponses.memory2.push({
+                    text: text,
+                    timestamp: timestamp
+                });
+                saveResponses();
                 
-                // Show response
-                memoryResponse2.innerHTML = `
-                    <p><strong>Gesture That Makes You Smile:</strong> ${gestureText}</p>
-                    <p style="color:#ffcc00; margin-top:10px;"><i class="fas fa-star"></i> I'll make sure to do that more often! Thanks for sharing!</p>
-                `;
-                memoryResponse2.style.display = 'block';
+                // Show to user
+                response2.style.display = 'block';
+                response2.innerHTML = `<strong>⭐ Your gesture:</strong> ${text}<br><span style="color:#b34167;">I'll do it every single day. Love you!</span>`;
+                memory2.value = '';
                 
-                // Create celebration effect
-                for(let i = 0; i < 5; i++) {
-                    createHeart();
-                    createConfetti();
-                }
+                for (let i=0;i<8;i++) createHeart();
                 
-                showTemporaryMessage("Gesture saved! ⭐", 1500);
-                
-                // Clear the textarea
-                tinyGesture.value = "";
+                // Update admin panel if open
+                updateAdminPanel();
             });
-            
-            // Function to create floating hearts for celebration
+
+            // ---------- HEART GENERATOR ----------
             function createHeart() {
                 const heart = document.createElement('div');
                 heart.innerHTML = '<i class="fas fa-heart"></i>';
                 heart.style.position = 'fixed';
-                heart.style.color = '#ff0066';
-                heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+                heart.style.color = ['#ff4d6d','#ff8c42','#ffd93d','#ff99cc'][Math.floor(Math.random()*4)];
+                heart.style.fontSize = (Math.random() * 45 + 25) + 'px';
                 heart.style.left = Math.random() * window.innerWidth + 'px';
                 heart.style.top = window.innerHeight + 'px';
-                heart.style.opacity = '0.8';
-                heart.style.zIndex = '1000';
+                heart.style.zIndex = '9999';
                 heart.style.pointerEvents = 'none';
-                
+                heart.style.textShadow = '0 0 15px #ff99aa';
+                heart.style.opacity = '0.95';
                 document.body.appendChild(heart);
                 
-                // Animation
-                const animation = heart.animate([
-                    { transform: 'translateY(0) rotate(0deg)', opacity: 0.8 },
-                    { transform: `translateY(-${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 3000 + 2000,
-                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                });
-                
-                // Remove heart after animation completes
-                animation.onfinish = () => {
-                    heart.remove();
-                };
+                const anim = heart.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 0.9 },
+                    { transform: 'translateY(-' + (window.innerHeight + 120) + 'px) rotate(' + (Math.random()*400) + 'deg)', opacity: 0 }
+                ], { duration: 2800 + Math.random()*2000, easing: 'cubic-bezier(0.3,0.1,0.4,1)' });
+                anim.onfinish = () => heart.remove();
             }
-            
-            // Function to create confetti
-            function createConfetti() {
-                const confetti = document.createElement('div');
-                confetti.className = 'confetti';
-                confetti.style.backgroundColor = getRandomColor();
-                confetti.style.left = Math.random() * window.innerWidth + 'px';
-                confetti.style.top = '-20px';
-                
-                document.body.appendChild(confetti);
-                
-                // Animation
-                const animation = confetti.animate([
-                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
-                    { transform: `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
-                ], {
-                    duration: Math.random() * 2000 + 1000,
-                    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
-                });
-                
-                // Remove confetti after animation completes
-                animation.onfinish = () => {
-                    confetti.remove();
-                };
-            }
-            
-            // Helper function for random colors
-            function getRandomColor() {
-                const colors = ['#ff0066', '#ff4da6', '#ffcc00', '#66ff66', '#6699ff', '#cc66ff'];
-                return colors[Math.floor(Math.random() * colors.length)];
-            }
-            
-            // Create some initial floating hearts
-            for(let i = 0; i < 8; i++) {
-                setTimeout(createHeart, i * 300);
-            }
-            
-            // Make the YES button also move a little (but less than NO button)
-            yesButton.addEventListener('mouseenter', function(e) {
-                // Just a little wiggle for the YES button
-                yesButton.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
-                
-                setTimeout(() => {
-                    yesButton.style.transform = 'scale(1.05)';
-                }, 300);
-            });
-            
-            // Update container dimensions on resize
-            window.addEventListener('resize', function() {
-                const newContainerRect = container.getBoundingClientRect();
-                containerRect.width = newContainerRect.width;
-                containerRect.height = newContainerRect.height;
-            });
-            
-            // Add some example text to the memory fields as placeholder inspiration
-            window.addEventListener('load', function() {
-                // Set some placeholder inspiration text
-                favoriteMemory.placeholder = "Like that time we laughed so hard over coffee, or when you surprised me with a tiny note...";
-                tinyGesture.placeholder = "Maybe it's when I send you a funny meme, or when you make me my favorite drink...";
-            });
-        });
-    </script>
-</body>
 
+            // ---------- ADMIN LOGIN BUTTON ----------
+            adminLoginBtn.addEventListener('click', function() {
+                loginModal.classList.add('show');
+                username.value = '';
+                password.value = '';
+                username.focus();
+            });
+            
+            // ---------- LOGIN SUBMIT ----------
+            loginSubmitBtn.addEventListener('click', function() {
+                if (username.value === ADMIN_USERNAME && password.value === ADMIN_PASSWORD) {
+                    loginModal.classList.remove('show');
+                    adminPanel.classList.add('show');
+                    updateAdminPanel();
+                } else {
+                    alert('❌ Invalid username or password!');
+                    password.value = '';
+                }
+            });
+            
+            // ---------- LOGIN CANCEL ----------
+            loginCancelBtn.addEventListener('click', function() {
+                loginModal.classList.remove('show');
+            });
+            
+            // ---------- CLOSE ADMIN PANEL ----------
+            closeAdminBtn.addEventListener('click', function() {
+                adminPanel.classList.remove('show');
+            });
+            
+            // ---------- ENTER KEY IN LOGIN ----------
+            password.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    loginSubmitBtn.click();
+                }
+            });
+            
+            username.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    password.focus();
+                }
+            });
+
+            // ---------- INITIAL SETUP ----------
+            page1.style.position = 'relative';
+            loadResponses();
+            updateAdminPanel();
+
+            console.log("✅ Valetiny Day Ready! Admin Login: admin123 / 123");
+        })();
+    </script>
+
+    <!-- small fallback -->
+    <noscript>Please enable JavaScript for love and moving buttons</noscript>
+</body>
 </html>
